@@ -38,11 +38,11 @@
     animation: fadeUp .35s .08s both;
   }
   .contact-email {
-    font-size: 15px; color: #4a4a4a; text-align: center;
+    font-size: 15px; color: #f2f2f2; text-align: center;
     margin-bottom: 28px; letter-spacing: 1px;
     animation: fadeUp .35s .10s both;
   }
-  .contact-email span { color: #5a5a5a; user-select: all; }
+  .contact-email span { color: #ffffff; user-select: all; }
   .grass-bar {
     width: 100%; max-width: 440px; height: 8px; margin-bottom: 28px;
     background: repeating-linear-gradient(90deg,
@@ -96,13 +96,15 @@
       -2px 0 0 0 #3a3a3a, 2px 0 0 0 #2a2a2a,
       -2px -2px 0 0 #3a3a3a, 2px -2px 0 0 #3a3a3a,
       -2px 2px 0 0 #2a2a2a, 2px 2px 0 0 #222;
-  }
+   }
   .filter-btn:hover { color: #efefef; }
   .filter-btn.active { color: #efefef; background: #1a1a1a; }
-  .filter-btn[data-cat="Terror"].active { color: #e05555; }
-  .filter-btn[data-cat="Aventura"].active { color: #5d9e3f; }
-  .filter-btn[data-cat="Sci-Fi"].active { color: #5b9bd5; }
+  .filter-btn[data-cat="Terror"].active      { color: #e05555; }
+  .filter-btn[data-cat="Aventura"].active    { color: #5d9e3f; }
+  .filter-btn[data-cat="Sci-Fi"].active      { color: #5b9bd5; }
   .filter-btn[data-cat="Dinosaurios"].active { color: #c8a228; }
+  .filter-btn[data-cat="Zombies"].active     { color: #7ec850; }
+  .filter-btn[data-cat="Supervivencia"].active { color: #d4874a; }
 
   .mp-grid { display: flex; flex-direction: column; gap: 14px; }
 
@@ -137,10 +139,12 @@
     font-family: 'VT323', monospace; font-size: 14px; letter-spacing: 1px;
     padding: 1px 9px;
   }
-  .tag-terror   { background: #2a0a0a; color: #e05555; }
-  .tag-aventura { background: #0a1a0a; color: #5d9e3f; }
-  .tag-scifi    { background: #0a0f1a; color: #5b9bd5; }
-  .tag-dinos    { background: #1a1500; color: #c8a228; }
+  .tag-terror      { background: #2a0a0a; color: #e05555; }
+  .tag-aventura    { background: #0a1a0a; color: #5d9e3f; }
+  .tag-scifi       { background: #0a0f1a; color: #5b9bd5; }
+  .tag-dinos       { background: #1a1500; color: #c8a228; }
+  .tag-zombies     { background: #0e1a0a; color: #7ec850; }
+  .tag-supervivencia { background: #1a0e00; color: #d4874a; }
 
   .mp-actions { display: flex; gap: 10px; margin-top: 4px; }
 
@@ -222,15 +226,46 @@
 <div class="modpacks-section">
   <div class="section-sep" style="margin-top:32px;">modpacks</div>
 
+<div class="modpacks-section">
+  <div class="section-sep" style="margin-top:32px;">modpacks</div>
   <div class="filters">
     <button class="filter-btn active" data-cat="Todos" onclick="filtrar(this)">Todos</button>
     <button class="filter-btn" data-cat="Terror" onclick="filtrar(this)">Terror</button>
     <button class="filter-btn" data-cat="Aventura" onclick="filtrar(this)">Aventura</button>
     <button class="filter-btn" data-cat="Sci-Fi" onclick="filtrar(this)">Sci-Fi</button>
     <button class="filter-btn" data-cat="Dinosaurios" onclick="filtrar(this)">Dinosaurios</button>
+    <button class="filter-btn" data-cat="Zombies" onclick="filtrar(this)">Zombies</button>
+    <button class="filter-btn" data-cat="Supervivencia" onclick="filtrar(this)">Supervivencia</button>
   </div>
 
-  <div class="mp-grid">
+
+<!-- Apocalipsis Zombie -->
+<div class="mp-card" data-cats="Terror">
+  <div class="mp-top">
+    <div class="mp-icon">🧟</div>
+    <div class="mp-info">
+      <div class="mp-name">Apocalipsis Zombie - Zombies - Supervivencia</div>
+      <div class="mp-desc">Tu mision es sobrevivir en un mundo postapocaliptico, te pueden ver, te huelen y cada dia se vuelven mas inteligentes, ten cuidado con los ojos rojos flotantes...</div>
+    </div>
+  </div>
+  <div class="mp-tags">
+        <span class="mp-tag tag-zombies">Zombies</span>
+        <span class="mp-tag tag-supervivencia">Supervivencia</span>
+        <span class="mp-tag tag-terror">Terror</span>
+  </div>
+  <div class="mp-actions">
+    <a class="mp-dl" href="https://drive.google.com/drive/folders/1puqkYYoVp7l3piu5hnCYQ0-qQ62EcSFg?usp=sharing" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 2h14v2H5v-2z"/></svg>
+      Descargar
+    </a>
+    <a class="mp-yt" href="https://youtu.be/ZrN_SDtHDBk" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1C4.5 20.5 12 20.5 12 20.5s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.8 15.5V8.5l6.2 3.5-6.2 3.5z"/></svg>
+      Ver video
+    </a>
+  </div>
+</div>  
+
+<div class="mp-grid">
 
     <!-- Modpack 1: Entity From The Woods -->
     <div class="mp-card" data-cats="Terror">
